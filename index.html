@@ -8,41 +8,25 @@
   </head>
   <body>
     <div class="mainContainer">
-      <header>
-        <div class="logoHeader">
-          <nav>
-            <ul>
-              <li><a href="index.html">Characters</a></li>
-              <li><a href="planets.html">Planets</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <div id="headerContainer"></div>
       <main>
         <div id="charactersContainer"></div>
         <button id="loadMoreButton">Load More</button>
       </main>
-      <footer>
-        <ul class="socialLinks">
-          <li class="socialLinkItem">
-            <a
-              class="socialLink"
-              href="https://www.linkedin.com/in/nadiia-alaieva/"
-              target="_blank"
-              ><img class="socialLinkImg" src="" alt="linkedin icon"
-            /></a>
-          </li>
-          <li class="socialLinkItem">
-            <a
-              class="socialLink"
-              href="https://github.com/tizzifona "
-              target="_blank"
-              ><img class="socialLinkImg" src="" alt="github icon"
-            /></a>
-          </li>
-        </ul>
-        <p>© 2024 Dragonball API Project</p>
-      </footer>
+      <div id="footerContainer"></div>
+      <script>
+        fetch("./header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("headerContainer").innerHTML = data;
+          });
+
+        fetch("./footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footerContainer").innerHTML = data;
+          });
+      </script>
       <script type="module" src="./js/characters.js"></script>
     </div>
   </body>
