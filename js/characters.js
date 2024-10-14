@@ -1,10 +1,11 @@
 const requestURL = "https://dragonball-api.com/api/characters"; 
 const charactersContainer = document.getElementById('charactersContainer');
-
+const loadMoreButton = document.getElementById('loadMoreButton');
 const itemsPerPage = 8;  
+let currentPage = 1; 
 
 export async function fetchCharacters(page) {
-    const response = await fetch(`${requestURL}?page=${page}&limit=${itemsPerPage}`);
+    const response = await fetch(`${requestURL}?page=${page}&limit=${itemsPerPage}`); 
     const data = await response.json(); 
     return data.items; 
 }
@@ -32,3 +33,11 @@ export function displayCharacters(characters) {
         </div>`;
     });
 }
+
+fetchCharacters(currentPage).then(displayCharacters);
+
+loadMoreButton.addEventListener('click', async () => {
+    currentPage++;
+    const newCharacters = await fetchCharacters(currentPage); 
+    displayCharacters(newCharacters); 
+});
