@@ -22,10 +22,14 @@ export function displayCharacters(characters) {
 
         charactersContainer.innerHTML += `
         <div class="characterInfo">
+        <div class="characterImgContainer">
             <img src="${image}" class="characterInfoImg" alt="${name}">
+            </div>
             <div class="characterInfoMain">
+            <div class="characterInfoHeader">
                 <h5 class="characterInfoTitle">${name}</h5>
                 <p class="characterInfoText">${gender} - ${race}</p>
+                </div>
                 <p class="characterInfoText">Base KI: ${ki}</p>
                 <p class="characterInfoText">Total KI: ${maxKi}</p>
                 <p class="characterInfoText">Affiliation: ${affiliation}</p>

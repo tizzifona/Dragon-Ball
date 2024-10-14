@@ -1,0 +1,62 @@
+.mainLogo {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.mainLogo img {
+  object-fit: cover;
+  max-width: 100%;
+}
+
+#charactersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* overflow-x: hidden; */
+}
+
+.characterInfo {
+  width: 20%;
+  margin-right: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: 30px;
+  background-color: #3e939a;
+  -webkit-box-shadow: 0px 0px 15px 2px rgba(246, 247, 245, 0.39);
+  -moz-box-shadow: 0px 0px 15px 2px rgba(246, 247, 245, 0.39);
+  box-shadow: 0px 0px 15px 2px rgba(246, 247, 245, 0.39);
+}
+.characterInfo:nth-child(4n) {
+  margin-right: 0;
+}
+
+.characterImgContainer {
+  /* position: relative; */
+  padding-top: 10px;
+  background-color: #f6f7f5;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.characterInfoImg {
+  object-fit: contain;
+  /* position: absolute; */
+  /* top: -20px;
+  z-index: 0; */
+  width: 100%;
+  height: 400px;
+  transition: transform 0.6s ease;
+  transition-delay: 0s;
+}
+
+.characterInfoImg:hover {
+  transform: scale(1.15);
+}
+
+.characterInfoMain {
+  color: #f6f7f5;
+}
+
+.characterInfoHeader {
+  text-align: center;
+}
