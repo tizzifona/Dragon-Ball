@@ -21,14 +21,14 @@ export function displayCharacters(characters) {
         let maxKi = character.maxKi;
 
         charactersContainer.innerHTML += `
-        <div class="card" style="width: 18rem; margin: 10px;">
-            <img src="${image}" class="card-img-top" alt="${name}">
-            <div class="card-body">
-                <h5 class="card-title">${name}</h5>
-                <p class="card-text">${gender} - ${race}</p>
-                <p class="card-text">Base KI: ${ki}</p>
-                <p class="card-text">Total KI: ${maxKi}</p>
-                <p class="card-text">Affiliation: ${affiliation}</p>
+        <div class="characterInfo">
+            <img src="${image}" class="characterInfoImg" alt="${name}">
+            <div class="characterInfoMain">
+                <h5 class="characterInfoTitle">${name}</h5>
+                <p class="characterInfoText">${gender} - ${race}</p>
+                <p class="characterInfoText">Base KI: ${ki}</p>
+                <p class="characterInfoText">Total KI: ${maxKi}</p>
+                <p class="characterInfoText">Affiliation: ${affiliation}</p>
             </div>
         </div>`;
     });
