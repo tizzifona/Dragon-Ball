@@ -1,0 +1,44 @@
+header {
+  width: 100vw;
+  background-color: #f6f7f5;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 30px;
+}
+
+.logoHeader {
+  width: 100px;
+  height: 100px;
+}
+
+.logoHeader img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.navLinks {
+  display: flex;
+  list-style-type: none;
+}
+
+.navLink {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.navLink a {
+  color: #484655;
+}
+
+.navLink:first-child {
+  margin-right: 20px;
+}
+
+.navLinkIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
