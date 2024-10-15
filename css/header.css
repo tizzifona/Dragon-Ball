@@ -7,6 +7,9 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 5px 30px;
+  -webkit-box-shadow: 0px -9px 10px -7px rgba(72, 70, 85, 1) inset;
+  -moz-box-shadow: 0px -9px 10px -7px rgba(72, 70, 85, 1) inset;
+  box-shadow: 0px -9px 10px -7px rgba(72, 70, 85, 1) inset;
 }
 
 .logoHeader {
