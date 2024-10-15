@@ -31,9 +31,9 @@ export function displayCharacters(characters) {
                 <p class="characterInfoTitleText">${gender} - ${race}</p>
                 </div>
                 <div class="lineInderInfoTitle"></div>
-                <p class="characterInfoText">Base KI: ${ki}</p>
-                <p class="characterInfoText">Total KI: ${maxKi}</p>
-                <p class="characterInfoText">Affiliation: ${affiliation}</p>
+                <p class="characterInfoText"><span class="boldText">Base KI:</span> ${ki}</p>
+            <p class="characterInfoText"><span class="boldText">Total KI:</span> ${maxKi}</p>
+            <p class="characterInfoText"><span class="boldText">Affiliation:</span> ${affiliation}</p>
             </div>
         </div>`;
     });
