@@ -1,0 +1,25 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #f6f7f5;
+  height: 5%;
+  padding: 10px;
+  color: #484655;
+}
+
+.socialLinks {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialLinkImg {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}

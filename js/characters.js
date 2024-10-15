@@ -30,6 +30,7 @@ export function displayCharacters(characters) {
                 <h5 class="characterInfoTitle">${name}</h5>
                 <p class="characterInfoTitleText">${gender} - ${race}</p>
                 </div>
+                <div class="lineInderInfoTitle"></div>
                 <p class="characterInfoText">Base KI: ${ki}</p>
                 <p class="characterInfoText">Total KI: ${maxKi}</p>
                 <p class="characterInfoText">Affiliation: ${affiliation}</p>
