@@ -9,9 +9,9 @@ footer {
   height: 5%;
   padding: 10px;
   color: #484655;
-  -webkit-box-shadow: 0px 9px 10px -7px rgba(72, 70, 85, 1) inset;
-  -moz-box-shadow: 0px 9px 10px -7px rgba(72, 70, 85, 1) inset;
-  box-shadow: 0px 9px 10px -7px rgba(72, 70, 85, 1) inset;
+  -webkit-box-shadow: 0px 9px 10px -12px rgba(72, 70, 85, 1) inset;
+  -moz-box-shadow: 0px 9px 10px -12px rgba(72, 70, 85, 1) inset;
+  box-shadow: 0px 9px 10px -12px rgba(72, 70, 85, 1) inset;
 }
 
 .socialLinks {
@@ -25,4 +25,10 @@ footer {
   width: 30px;
   height: 30px;
   margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.socialLinkImg:hover,
+.socialLinkImg:focus {
+  transform: scale(1.25);
 }
