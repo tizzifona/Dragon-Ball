@@ -14,27 +14,35 @@
     <title>Dragonball Planets</title>
   </head>
   <body>
+    <div id="headerContainer"></div>
     <div class="mainContainer">
-      <div id="headerContainer"></div>
       <main>
         <div id="planetsContainer"></div>
-        <button id="loadMoreButtonPlanets">Load More</button>
+        <div class="buttonContainerPlanets">
+          <button id="loadMoreButtonPlanets">
+            <img
+              class="loadMoreImg"
+              src="./images/header/icons/dragon-ball.png"
+              alt="dragon ball icon"
+            />Load More
+          </button>
+        </div>
       </main>
-      <div id="footerContainer"></div>
-      <script>
-        fetch("./header.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("headerContainer").innerHTML = data;
-          });
-
-        fetch("./footer.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("footerContainer").innerHTML = data;
-          });
-      </script>
-      <script type="module" src="./js/planets.js"></script>
     </div>
+    <div id="footerContainer"></div>
+    <script>
+      fetch("./header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("headerContainer").innerHTML = data;
+        });
+
+      fetch("./footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footerContainer").innerHTML = data;
+        });
+    </script>
+    <script type="module" src="./js/planets.js"></script>
   </body>
 </html>
