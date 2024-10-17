@@ -51,4 +51,8 @@
     width: 20px;
     height: 20px;
   }
+
+  .scrollToTopButton {
+    right: 5px;
+  }
 }
