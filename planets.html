@@ -37,13 +37,13 @@
     </div>
     <div id="footerContainer"></div>
     <script>
-      fetch("./header.html")
+      fetch("./html/header.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("headerContainer").innerHTML = data;
         });
 
-      fetch("./footer.html")
+      fetch("./html/footer.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("footerContainer").innerHTML = data;
