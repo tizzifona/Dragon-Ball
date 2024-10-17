@@ -1,24 +1,21 @@
 @keyframes fallingStars {
   0% {
-    transform: translate(
-      0,
-      0
-    ); /* Начальная позиция: откуда начинает падать звезда */
+    transform: translate(0, 0);
     opacity: 1;
   }
   100% {
-    transform: translate(100vw, 100vh); /* Падение по диагонали */
+    transform: translate(100vw, 100vh);
     opacity: 0;
   }
 }
 
 @keyframes fallingStarsVertical {
   0% {
-    transform: translateY(0); /* Падение вертикально */
+    transform: translateY(0);
     opacity: 1;
   }
   100% {
-    transform: translateY(100vh); /* До нижней границы экрана */
+    transform: translateY(100vh);
     opacity: 0;
   }
 }
@@ -28,14 +25,13 @@
   width: 8px;
   height: 8px;
   background-color: white;
-  box-shadow: 0px 0px 10px 5px white; /* Эффект свечения */
+  box-shadow: 0px 0px 10px 5px white;
   border-radius: 50%;
   opacity: 0;
 }
 
-/* Каждая звезда получает случайные начальные координаты и разную анимацию */
 .stars:nth-child(1) {
-  top: 10%; /* Звезда начинает в верхней части экрана */
+  top: 10%;
   left: 5%;
   animation: fallingStars 10s linear infinite;
   animation-delay: 1s;
@@ -49,7 +45,7 @@
 }
 
 .stars:nth-child(3) {
-  top: 50%; /* Стартует из середины экрана */
+  top: 50%;
   left: 30%;
   animation: fallingStars 14s linear infinite;
   animation-delay: 3s;
@@ -58,7 +54,7 @@
 .stars:nth-child(4) {
   top: 70%;
   left: 50%;
-  animation: fallingStarsVertical 16s linear infinite; /* Падает вертикально */
+  animation: fallingStarsVertical 16s linear infinite;
   animation-delay: 4s;
 }
 
