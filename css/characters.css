@@ -175,6 +175,14 @@
   .loadMoreButton {
     width: 25%;
   }
+
+  .characterInfo {
+    width: 40%;
+    margin-right: 5%;
+  }
+  .characterInfo:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 768px) {
