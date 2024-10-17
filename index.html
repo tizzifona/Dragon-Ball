@@ -4,12 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" href="images/dragonball-favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Dragonball Characters</title>
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="./js/index.js"></script>
+    <div id="headerContainer"></div>
+    <div class="mainContainer">
+      <main>
+        <div class="mainLogo">
+          <img
+            src="./images/main/dragonballMain.png"
+            alt="dragon ball big logo"
+          />
+        </div>
+        <div id="charactersContainer" class="charactersContainer"></div>
+        <div class="buttonContainer">
+          <button id="loadMoreButton" class="loadMoreButton">
+            <img
+              class="loadMoreImg"
+              src="./images/header/icons/dragon-ball.png"
+              alt="dragon ball icon"
+            />Load More
+          </button>
+        </div>
+      </main>
+    </div>
+    <div id="footerContainer"></div>
+    <script>
+      fetch("./html/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("headerContainer").innerHTML = data;
+        });
+
+      fetch("./html/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footerContainer").innerHTML = data;
+        });
+    </script>
+    <script type="module" src="./js/characters.js"></script>
+    <script type="module" src="./js/scrollToTop.js"></script>
+    <button id="scrollToTopButton" class="scrollToTopButton">
+      <svg class="scrollToTopImg">
+        <use href="./images/main/icons.svg#icon-arrow-up"></use>
+      </svg>
+    </button>
   </body>
 </html>

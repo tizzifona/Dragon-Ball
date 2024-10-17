@@ -1,0 +1,251 @@
+.mainLogo {
+  width: 25%;
+  margin: 30px auto;
+}
+
+.mainLogo img {
+  object-fit: cover;
+  max-width: 100%;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.charactersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.characterInfo {
+  width: 20%;
+  margin-right: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-bottom: 40px;
+  border: 2px solid #005f00;
+  background-color: #f6f7f5;
+  padding-bottom: 10px;
+  -webkit-box-shadow: 0px 0px 8px -2px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 0px 0px 8px -2px rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 8px -2px rgba(255, 255, 255, 1);
+}
+.characterInfo:nth-child(4n) {
+  margin-right: 0;
+}
+
+.characterImgContainer {
+  padding-top: 10px;
+  background-color: #f6f7f5;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-image: url("../images/main/dragonballBackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.characterInfoImg {
+  object-fit: contain;
+  width: 100%;
+  height: 400px;
+  transition: transform 0.6s ease;
+  transition-delay: 0s;
+}
+
+.characterInfoImg:hover {
+  transform: scale(1.15);
+}
+
+.characterInfoMain {
+  text-align: center;
+}
+
+.characterInfoHeader {
+  text-align: center;
+}
+
+.characterInfoTitle {
+  color: #fa7800;
+  font-size: 42px;
+  margin-top: 20px;
+}
+
+.characterInfoTitleText {
+  margin-top: 0;
+  color: #005f00;
+  font-size: 20px;
+}
+
+.lineUnderInfoTitle {
+  background-color: #fa7800;
+  height: 4px;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 30%;
+}
+
+.characterInfoText {
+  margin: 10px;
+  font-size: 16px;
+}
+
+.boldText {
+  font-weight: bold;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.loadMoreButton {
+  width: 15%;
+  margin-bottom: 50px;
+  background-color: #484655;
+  color: #f6f7f5;
+  border: 2px solid #f6f7f5;
+  padding: 10px 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.loadMoreButton:hover {
+  background-color: #f6f7f5;
+  color: #484655;
+  border: 2px solid #484655;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.loadMoreButton:active {
+  transform: scale(0.95);
+}
+
+.loadMoreImg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+.loadMoreButton:hover .loadMoreImg {
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .charactersContainer {
+    justify-content: center;
+  }
+
+  .loadMoreButton {
+    width: 25%;
+  }
+
+  .characterInfo {
+    width: 40%;
+    margin-right: 5%;
+  }
+  .characterInfo:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .charactersContainer {
+    justify-content: center;
+  }
+
+  .mainLogo {
+    width: 40%;
+  }
+
+  .characterInfo {
+    width: 40%;
+    margin-right: 5%;
+  }
+
+  .characterInfo:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .characterInfoImg {
+    height: 300px;
+  }
+
+  .loadMoreButton {
+    width: 25%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .charactersContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .mainLogo {
+    width: 60%;
+  }
+
+  .characterInfo {
+    width: 80%;
+    margin-right: 0;
+  }
+
+  .characterInfoImg {
+    height: 250px;
+  }
+
+  .characterInfoTitle {
+    font-size: 32px;
+  }
+
+  .characterInfoTitleText {
+    font-size: 18px;
+  }
+
+  .characterInfoText {
+    font-size: 14px;
+  }
+
+  .loadMoreButton {
+    width: 50%;
+    font-size: 14px;
+  }
+}

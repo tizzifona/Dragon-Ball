@@ -1,0 +1,58 @@
+.scrollToTopButton {
+  position: fixed;
+  bottom: 150px;
+  right: 20px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1000;
+  display: none;
+}
+
+.scrollToTopImg {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease, fill 0.3s ease;
+  fill: #fa7800;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.scrollToTopButton:hover .scrollToTopImg {
+  transform: scale(1.4);
+  fill: #f6f7f5;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .scrollToTopImg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .scrollToTopButton {
+    right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .scrollToTopImg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .scrollToTopButton {
+    right: 5px;
+  }
+}
