@@ -1,4 +1,4 @@
-#planetsContainer {
+.planetsContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -19,10 +19,6 @@
   -webkit-box-shadow: 0px 0px 8px -2px rgba(255, 255, 255, 1);
   -moz-box-shadow: 0px 0px 8px -2px rgba(255, 255, 255, 1);
   box-shadow: 0px 0px 8px -2px rgba(255, 255, 255, 1);
-}
-
-.planetInfo:nth-child(4n) {
-  margin-right: 0;
 }
 
 .planetImgContainer {
@@ -73,7 +69,7 @@
   margin-bottom: 5px;
 }
 
-#loadMoreButtonPlanets {
+.loadMoreButtonPlanets {
   width: 15%;
   margin: 0 auto;
   background-color: #484655;
@@ -93,14 +89,14 @@
   transition: all 0.3s ease;
 }
 
-#loadMoreButtonPlanets:hover {
+.loadMoreButtonPlanets:hover {
   background-color: #f6f7f5;
   color: #484655;
   border: 2px solid #484655;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-#loadMoreButtonPlanets:active {
+.loadMoreButtonPlanets:active {
   transform: scale(0.95);
 }
 
@@ -110,7 +106,7 @@
   transition: transform 0.3s ease;
 }
 
-#loadMoreButtonPlanets:hover .loadMoreImg {
+.loadMoreButtonPlanets:hover .loadMoreImg {
   animation: bounce 0.5s ease;
 }
 
@@ -131,4 +127,69 @@
 
 .buttonContainerPlanets {
   margin-bottom: 50px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .loadMoreButtonPlanets {
+    width: 25%;
+  }
+  .planetInfo {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .planetsContainer {
+    justify-content: center;
+  }
+  .planetInfo {
+    width: 80%;
+  }
+
+  .planetInfoImg {
+    height: 300px;
+  }
+
+  .planetInfoTitle {
+    font-size: 32px;
+  }
+
+  .planetInfoText {
+    font-size: 18px;
+  }
+
+  .loadMoreButtonPlanets {
+    width: 25%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .planetsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .planetInfo {
+    width: 80%;
+    margin-right: 0;
+    margin-top: 30px;
+  }
+
+  .planetInfoImg {
+    height: 250px;
+  }
+
+  .planetInfoTitle {
+    font-size: 24px;
+  }
+
+  .planetInfoText {
+    font-size: 16px;
+  }
+
+  .loadMoreButtonPlanets {
+    width: 50%;
+    font-size: 14px;
+  }
 }
